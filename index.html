@@ -7,8 +7,6 @@
 		<link type="text/css" rel="stylesheet" href="main.css">
 	</head>
 	<body>
-
-		<div id="container"></div>
 		<div id="info">
 			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> sketch, credits to <a href="https://twitter.com/fernandojsg">@fernandojsg<br/>
 			by tomsail & jeanburo</a>
@@ -91,8 +89,8 @@
 			function init() {
 
 				initGUI();
-
-				container = document.getElementById( 'container' );
+				const container = document.createElement( 'div' );
+				document.body.appendChild( container );
 
 				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 4000 );
 				camera.position.z = 1750;
