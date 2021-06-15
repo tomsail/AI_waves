@@ -88,9 +88,9 @@
 
 			function init() {
 
-				initGUI();
 				const container = document.createElement( 'div' );
 				document.body.appendChild( container );
+				initGUI();
 
 				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 4000 );
 				camera.position.z = 1750;
