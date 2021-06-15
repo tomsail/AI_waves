@@ -96,10 +96,6 @@
 				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 4000 );
 				camera.position.z = 1750;
 
-				const controls = new OrbitControls( camera, renderer.domElement );
-				controls.minDistance = 1000;
-				controls.maxDistance = 3000;
-
 				scene = new THREE.Scene();
 
 
@@ -186,6 +182,10 @@
 				renderer.outputEncoding = THREE.sRGBEncoding;
 
 				container.appendChild( renderer.domElement );
+
+				const controls = new OrbitControls( camera, renderer.domElement );
+				controls.minDistance = 1000;
+				controls.maxDistance = 3000;
 
 				//
 
